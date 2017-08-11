@@ -11,10 +11,6 @@ import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.exceptions.RateLimitedException;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
-/**
- * Hello world!
- *
- */
 public class App extends ListenerAdapter {
     public static void main( String[] args ) throws LoginException, IllegalArgumentException, InterruptedException, RateLimitedException
     {
@@ -33,7 +29,5 @@ public class App extends ListenerAdapter {
       	objChannel.sendMessage("Hello, " +objUser.getAsMention() + "!").queue();	
       		
     	}
-     	
     }
-    
 }
