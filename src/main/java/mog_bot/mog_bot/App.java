@@ -2,6 +2,7 @@ package mog_bot.mog_bot;
 
 import javax.security.auth.login.LoginException;
 
+import codebase.contentReader;
 import codebase.loadInsults;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
@@ -30,26 +31,16 @@ public class App extends ListenerAdapter {
 		MessageChannel objChannel = e.getChannel();
 		User objUser = e.getAuthor();
 
-		if (objMsg.getContent().equalsIgnoreCase("test")) {
+		objChannel.sendMessage(contentReader.GetContent(objMsg.getContent(), objUser.getName())).queue();
 
-			switch (objUser.getName()) {
-
-			case "Teefy":
-					
-				objChannel.sendMessage("Hello, you " + loadInsults.returnInsult() + objUser.getAsMention()).queue();
-				break;
-			case "Icestorm":
-				objChannel.sendMessage("Hello, you " + loadInsults.returnInsult() + objUser.getAsMention()).queue();
-				break;
-			case "Mog_no_1":
-				objChannel.sendMessage("oh look, its the " + loadInsults.returnInsult() + objUser.getAsMention()).queue();
-				objChannel.sendMessage("please, just get fucking lost... ").queue();
-				break;
-
-			default:
-				objChannel.sendMessage("Welcome, simple pleb").queue();
-				break;
-			}
-		}
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
