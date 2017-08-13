@@ -2,6 +2,8 @@ package mog_bot.mog_bot;
 
 import javax.security.auth.login.LoginException;
 
+import org.hamcrest.core.IsNull;
+
 import codebase.contentReader;
 import codebase.loadInsults;
 import net.dv8tion.jda.core.AccountType;
@@ -31,8 +33,12 @@ public class App extends ListenerAdapter {
 		MessageChannel objChannel = e.getChannel();
 		User objUser = e.getAuthor();
 
-		objChannel.sendMessage(contentReader.GetContent(objMsg.getContent(), objUser.getName())).queue();
-
+		String FilteredMessage =contentReader.GetContent(objMsg.getContent(), objUser.getName());
+		
+		if (FilteredMessage !=null) {
+		objChannel.sendMessage(FilteredMessage).queue();
+		}
+		
 	}
 	
 	

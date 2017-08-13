@@ -1,7 +1,5 @@
 package codebase;
 
-import java.util.function.IntSupplier;
-
 public class contentReader {
 
 	public static String GetContent(String Bericht, String Gebruiker) {
@@ -13,11 +11,17 @@ public class contentReader {
 		switch (Bericht) {
 
 		case "!commands":
-			Reactie = "We have the following commands: !hello, !insult, !hug, !slap, !kick";
+			Reactie = "We have the following commands: hello, insult, hug, slap, kick <user>, God? | All commands need an ! before them";
 			break;
 		case "!hello":
-			Reactie = "Hello, " + Gebruiker;
+
+			if (Gebruiker.equalsIgnoreCase("Teefy")) {
+				Reactie = "Hello, beautiful /wink";
+			} else {
+				Reactie = "Hello, " + Gebruiker;
+			}
 			break;
+
 		case "!insult":
 			Reactie = "Fuck off, you " + loadInsults.returnInsult();
 			break;
@@ -27,15 +31,27 @@ public class contentReader {
 		case "!slap":
 			Reactie = "/Slaps Mog accross the face ";
 			break;
-		case "!kick":
-			Reactie = "/Kicks Mog in the Roo testicles. Hurts, doesn't it !";
+		case "!god?":
+			Reactie = "All bow before the overlord, Our Saviour, Mog the Merciful, the Bringer of Pain and Suffering !";
 			break;
+		}
+
+		if (Bericht.contains("!kick ")) {
+
+			String Victim = null;
+			Victim = Bericht.substring(6, Bericht.length());
+			Reactie = "/Kicks " + Victim + " in the balls";
 
 		}
 
 		return Reactie;
 
 	}
-	
+
+	public static void main(String[] args) {
+
+		System.out.println(GetContent("!kick Mog_No_1", "Teefy"));
+
+	}
 
 }
