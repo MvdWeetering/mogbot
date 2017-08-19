@@ -12,6 +12,7 @@ public class jokes {
 
 	public static String loadJoke() {
 
+		int i = 0;
 		String csvFile = "C:/mogbot/jokes.csv";
 		BufferedReader reader = null;
 		try {
@@ -25,6 +26,7 @@ public class jokes {
 		try {
 			while ((line = reader.readLine()) != null) {
 				lines.add(line);
+				i = i +1;
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -33,7 +35,7 @@ public class jokes {
 
 		Random r = new Random();
 
-		int choice = 1 + r.nextInt(70);
+		int choice = 1 + r.nextInt(i);
 
 		return(lines.get(choice));
 

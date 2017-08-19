@@ -2,10 +2,7 @@ package mog_bot.mog_bot;
 
 import javax.security.auth.login.LoginException;
 
-import org.hamcrest.core.IsNull;
-
 import codebase.contentReader;
-import codebase.loadInsults;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;

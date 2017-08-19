@@ -22,7 +22,7 @@ public class contentReader {
 				Reactie = "Hello, you Manly Man";
 			}
 			else if (Gebruiker.equalsIgnoreCase("Mog_no_1")) {
-				Reactie = "All bow before the Great Leader and Captain ! hi Mog :)";
+				Reactie = "All bow before the Great Leader and Master ! hi Mog :)";
 			}
 			else {
 				Reactie = "Hello, " + Gebruiker + ". Its good to see the plebs has found their way here";
@@ -35,12 +35,25 @@ public class contentReader {
 		case "!hug":
 			Reactie = "c'mere, lets give you a hug !";
 			break;
+		case "!bringcoffee":
+			Reactie = "Get your own coffee. lazy wanker!";
+			break;
 		case "!god?":
 			Reactie = "All bow before the overlord, Our Saviour, Mog the Merciful, the Bringer of Pain and Suffering !";
 			break;
 		case "!joke":
 			Reactie = jokes.loadJoke();
-		
+			break;
+		case "!name":	
+			Reactie = NameGenerator.generateName();
+			break;
+		case "!roo":
+			Reactie = "The only good Roo is the one on my dinner plate. HAHA ! ";
+			break;
+		case "!shitgold":
+			Reactie = "The only thing you're shitting is :poop: ! ";
+			break;
+			
 		}
 
 		if (Bericht.contains("!kick ")) {
