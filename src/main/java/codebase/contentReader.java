@@ -5,7 +5,7 @@ import java.util.function.IntSupplier;
 public class contentReader {
 
 	private static boolean mogon;
-	
+
 	public static String GetContent(String Bericht, String Gebruiker) {
 
 		String Reactie = null;
@@ -14,7 +14,7 @@ public class contentReader {
 		switch (Bericht) {
 
 		case "!commands":
-			Reactie = "We have the following commands: hello, insult, hug <user>, slap <user>, kick <user>, God?, joke | All commands need an ! before them";
+			Reactie = "We have the following commands: insult,hug,online,bringcoffee,god?,joke,roo,shitgold,spider,coffee,wafflecunt,rooballs,ibis,boo,aww,beer,kick<user>,hug<user>,coffee<user>,slap<user> | All commands need an ! before them";
 			break;
 		case "!hello":
 
@@ -77,20 +77,23 @@ public class contentReader {
 		case "!aww":
 			Reactie = "http://gph.is/15zmlbN";
 			break;
-
+		case "!beer":
+			Reactie = "https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg" + "\n Bottoms up ! Or as the Dutch say: Proost !!!";
+	
+			break;
 		case "!mogstatus":
 			Reactie = Boolean.toString(mogon);
 			break;
-	
+			
+			//https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg
+			
 		default:
 			if (Gebruiker.equalsIgnoreCase("Mog_no_1") && mogon) {
-			Reactie = "Shut up " + loadInsults.returnInsult() + " !!";
-			break;
-			}
-				
+				Reactie = "Shut up " + loadInsults.returnInsult() + " !!";
+				break;
 			}
 
-
+		}
 
 		if (Bericht.contains("!kick ")) {
 			String Victim = null;
@@ -101,12 +104,11 @@ public class contentReader {
 		if (Bericht.contains("!mogon") && !Gebruiker.equalsIgnoreCase("Mog_no_1")) {
 			mogon = true;
 		}
-		
+
 		if (Bericht.contains("!mogoff") && !Gebruiker.equalsIgnoreCase("Mog_no_1")) {
 			mogon = false;
-			
 		}
-	
+
 		if (Bericht.contains("!coffee ")) {
 			String Victim = null;
 			Victim = Bericht.substring(8, Bericht.length());
