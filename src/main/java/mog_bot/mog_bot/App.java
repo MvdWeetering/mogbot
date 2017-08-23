@@ -2,6 +2,7 @@ package mog_bot.mog_bot;
 
 import javax.security.auth.login.LoginException;
 
+import codebase.ContentFilter;
 import codebase.contentReader;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
@@ -30,7 +31,7 @@ public class App extends ListenerAdapter {
 		MessageChannel objChannel = e.getChannel();
 		User objUser = e.getAuthor();
 
-		String FilteredMessage =contentReader.GetContent(objMsg.getContent(), objUser.getName());
+		String FilteredMessage = ContentFilter.FilteredMessge(objMsg.getContent(), objUser.getName());
 		
 		if (FilteredMessage !=null) {
 		objChannel.sendMessage(FilteredMessage).queue();

@@ -2,9 +2,12 @@ package codebase;
 
 import java.util.function.IntSupplier;
 
+import org.hamcrest.core.IsNull;
+
 public class contentReader {
 
-	private static boolean mogon;
+	public static boolean cursed = false;
+	public static String Cursevictim = "";
 
 	public static String GetContent(String Bericht, String Gebruiker) {
 
@@ -74,41 +77,63 @@ public class contentReader {
 		case "!boo":
 			Reactie = "http://gph.is/17h4Snw";
 			break;
+		case "!news":
+			Reactie = "yes. there's news. yey..";
+			break;
 		case "!aww":
 			Reactie = "http://gph.is/15zmlbN";
 			break;
 		case "!beer":
-			Reactie = "https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg" + "\n Bottoms up ! Or as the Dutch say: Proost !!!";
-	
+			Reactie = "https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg"
+					+ "\n Bottoms up ! Or as the Dutch say: Proost !!!";
 			break;
-		case "!mogstatus":
-			Reactie = Boolean.toString(mogon);
-			break;
-			
-			//https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg
-			
-		default:
-			if (Gebruiker.equalsIgnoreCase("Mog_no_1") && mogon) {
-				Reactie = "Shut up " + loadInsults.returnInsult() + " !!";
-				break;
+
+		case "!cursed":
+
+			if (cursed == false) {
+				Reactie = "Mogbot the Merciful has not cursed anyone. yet..";
+			} else {
+				Reactie = "Mogbot the terrible has cursed " + Cursevictim;
 			}
+			break;
+
+		case "!liftcurse":
+
+			if (cursed == true) {
+				cursed = false;
+				Cursevictim = "";
+
+				Reactie = Gebruiker + " Has shown mercy. Mogbot the Merciful lifted the curse... BOOOO !!!";
+
+			}
+
+			else {
+				Reactie = "Mogbot the Merciful has not cursed anyone. yet..";
+			}
+
+			break;
+
+		// https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg
 
 		}
 
 		if (Bericht.contains("!kick ")) {
 			String Victim = null;
 			Victim = Bericht.substring(6, Bericht.length());
-			Reactie = "/Kicks " + Victim + " in the balls";
+			Reactie = "*/Kicks " + Victim + " in the balls*";
 		}
 
-		if (Bericht.contains("!mogon") && !Gebruiker.equalsIgnoreCase("Mog_no_1")) {
-			mogon = true;
-		}
+		if (Bericht.contains("!curse ") && cursed == false) {
+			String Victim = null;
+			Victim = Bericht.substring(7, Bericht.length());
+			cursed = true;
+			Cursevictim = Victim;
+			Reactie = Victim + " is cursed";
 
-		if (Bericht.contains("!mogoff") && !Gebruiker.equalsIgnoreCase("Mog_no_1")) {
-			mogon = false;
+		} else if (Bericht.contains("!curse ") && cursed == true) {
+			Reactie = "someone is already cursed. what do you think Mogbot is, a wizard ?";
 		}
-
+		
 		if (Bericht.contains("!coffee ")) {
 			String Victim = null;
 			Victim = Bericht.substring(8, Bericht.length());
@@ -133,8 +158,9 @@ public class contentReader {
 
 	public static void main(String[] args) {
 
-		System.out.println(GetContent("!coffee", "Teefy"));
-
+		System.out.println(GetContent("!cursed", "Teefy"));
+		System.out.println(Boolean.toString(cursed));
+		System.out.println(Cursevictim);
 	}
 
 }
