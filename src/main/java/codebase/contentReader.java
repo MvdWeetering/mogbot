@@ -1,5 +1,6 @@
 package codebase;
 
+import java.util.Random;
 import java.util.function.IntSupplier;
 
 import org.hamcrest.core.IsNull;
@@ -8,7 +9,9 @@ public class contentReader {
 
 	public static boolean cursed = false;
 	public static String Cursevictim = "";
-
+	public static int SelectedCurse;
+	static int counter;
+	
 	public static String GetContent(String Bericht, String Gebruiker) {
 
 		String Reactie = null;
@@ -99,17 +102,7 @@ public class contentReader {
 
 		case "!liftcurse":
 
-			if (cursed == true) {
-				cursed = false;
-				Cursevictim = "";
-
-				Reactie = Gebruiker + " Has shown mercy. Mogbot the Merciful lifted the curse... BOOOO !!!";
-
-			}
-
-			else {
-				Reactie = "Mogbot the Merciful has not cursed anyone. yet..";
-			}
+			Reactie = liftCurse(Cursevictim);
 
 			break;
 
@@ -125,7 +118,11 @@ public class contentReader {
 
 		if (Bericht.contains("!curse ") && cursed == false) {
 			cursed = true;
-			Cursevictim = Bericht.substring(7, Bericht.length());;
+			Cursevictim = Bericht.substring(7, Bericht.length());
+			counter = 8;
+			Random r = new Random();
+			//column 1
+			SelectedCurse = 1 + r.nextInt(3);
 			Reactie = "Mogbot the terrible has cursed " + Cursevictim;
 
 		} else if (Bericht.contains("!curse ") && cursed == true) {
@@ -153,12 +150,31 @@ public class contentReader {
 		return Reactie;
 
 	}
+	
+	public static String liftCurse(String Slachtoffer) {
+		
+		String Reactie;
+		if (cursed == true) {
+			cursed = false;
+			Cursevictim = "";
+			Reactie = Slachtoffer + " Has shown mercy. Mogbot the Merciful lifted the curse... BOOOO !!!";
+		}
+		else {
+			Reactie = "Mogbot the Merciful has not cursed anyone. yet..";
+		}
+		return Reactie;
+	}
+	
+	
 
 	public static void main(String[] args) {
 
-		System.out.println(GetContent("!cursed", "Teefy"));
+		System.out.println(GetContent("!curse teefy", "Teefy"));
 		System.out.println(Boolean.toString(cursed));
+		System.out.println( Integer.toString(SelectedCurse));
 		System.out.println(Cursevictim);
+		
+		System.out.println( curse.CastCurse("message", "teefy"));
 	}
 
 }

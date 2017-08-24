@@ -8,10 +8,9 @@ public class ContentFilter {
 
 		if (Gebruiker.equalsIgnoreCase(contentReader.Cursevictim) && contentReader.cursed == true) {
 		
-			
-			
-			
+					
 			ReturnMessage = curse.CastCurse(Message, Gebruiker);
+			
 		}
 
 		else {

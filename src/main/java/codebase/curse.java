@@ -3,31 +3,64 @@ package codebase;
 public class curse {
 
 	static String Curse = null;
+
 	
-	public static String CastCurse(String Bericht,String CurseVictim) {
+	public static String CastCurse(String Bericht, String CurseVictim) {
+
 		
-		Curse = CastParrot(Bericht, CurseVictim);
+		if (contentReader.counter == 4) {
+			Curse = "*The curse is becoming weaker*";
+			contentReader.counter = contentReader.counter - 1;
+		} 
+		else if (contentReader.counter == 0) {
+			contentReader.liftCurse(CurseVictim);
+			Curse = "*The curse has expired. awww*";
+			
+		}
+		else {
 		
-		
+		switch (contentReader.SelectedCurse) {
+
+		case 1:
+		 CastTourretes(Bericht, CurseVictim);
+			break;
+		case 2:
+			CastParrot(Bericht, CurseVictim);
+			break;
+		case 3:
+			Asskisser(Bericht, CurseVictim);
+			break;
+		}
+		contentReader.counter = contentReader.counter -1;
+		}
 		return Curse;
-		
+						
+
 	}
-	
-	public static String CastTourretes(String Bericht,String CurseVictim) {
-		
-		Curse = CurseVictim+", Fuck off. You " + loadInsults.returnInsult();
-		
-	return Curse;	
+
+	public static String CastTourretes(String Bericht, String CurseVictim) {
+
+		Curse = CurseVictim + ", Fuck off. You " + loadInsults.returnInsult();
+
+		return Curse;
 	}
-	
-public static String CastParrot(String Bericht,String CurseVictim) {
-		
-		Curse = Bericht.replaceAll("!", "") + ":troll:";
-		
-	return Curse;	
+
+	public static String CastParrot(String Bericht, String CurseVictim) {
+
+		String replacer = null;
+		replacer = Bericht;
+		Curse = replacer.replaceAll("!", "") + " <:troll:345905665405091842>";
+
+		return Curse;
 	}
-	
-	
-	
-	
+
+	public static String Asskisser(String Bericht, String CurseVictim) {
+
+		Curse = "Hello genious, arent you beautiful ?";
+
+		return Curse;
+	}
+
+
+
 }
