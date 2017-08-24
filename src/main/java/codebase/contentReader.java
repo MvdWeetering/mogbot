@@ -124,11 +124,9 @@ public class contentReader {
 		}
 
 		if (Bericht.contains("!curse ") && cursed == false) {
-			String Victim = null;
-			Victim = Bericht.substring(7, Bericht.length());
 			cursed = true;
-			Cursevictim = Victim;
-			Reactie = Victim + " is cursed";
+			Cursevictim = Bericht.substring(7, Bericht.length());;
+			Reactie = "Mogbot the terrible has cursed " + Cursevictim;
 
 		} else if (Bericht.contains("!curse ") && cursed == true) {
 			Reactie = "someone is already cursed. what do you think Mogbot is, a wizard ?";

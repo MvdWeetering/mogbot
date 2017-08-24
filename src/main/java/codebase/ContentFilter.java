@@ -11,7 +11,7 @@ public class ContentFilter {
 			
 			
 			
-			ReturnMessage = contentReader.Cursevictim + " is cursed";
+			ReturnMessage = curse.CastCurse(Message, Gebruiker);
 		}
 
 		else {
