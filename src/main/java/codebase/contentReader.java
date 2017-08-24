@@ -5,6 +5,8 @@ import java.util.function.IntSupplier;
 
 import org.hamcrest.core.IsNull;
 
+import net.dv8tion.jda.core.entities.User;
+
 public class contentReader {
 
 	public static boolean cursed = false;
@@ -86,6 +88,7 @@ public class contentReader {
 		case "!aww":
 			Reactie = "http://gph.is/15zmlbN";
 			break;
+		
 		case "!beer":
 			Reactie = "https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg"
 					+ "\n Bottoms up ! Or as the Dutch say: Proost !!!";
@@ -117,13 +120,23 @@ public class contentReader {
 		}
 
 		if (Bericht.contains("!curse ") && cursed == false) {
-			cursed = true;
+			
 			Cursevictim = Bericht.substring(7, Bericht.length());
-			counter = 8;
-			Random r = new Random();
-			//column 1
-			SelectedCurse = 1 + r.nextInt(3);
-			Reactie = "Mogbot the terrible has cursed " + Cursevictim;
+			
+			if (Cursevictim.equalsIgnoreCase("Teefy") | Cursevictim.equalsIgnoreCase("Icestorm") | Cursevictim.equalsIgnoreCase("mog_no_1") | Cursevictim.equalsIgnoreCase("vuduepriest")) {
+				cursed = true;
+				counter = 8;
+				Random r = new Random();
+				//column 1
+				SelectedCurse = 1 + r.nextInt(3);
+				Reactie = "Mogbot the terrible has cursed " + Cursevictim;	
+				
+			}
+			else {
+				Reactie = "Mogbot can't curse a ghost. Dimwit.";				
+			} 
+			
+		
 
 		} else if (Bericht.contains("!curse ") && cursed == true) {
 			Reactie = "someone is already cursed. what do you think Mogbot is, a wizard ?";
@@ -157,7 +170,7 @@ public class contentReader {
 		if (cursed == true) {
 			cursed = false;
 			Cursevictim = "";
-			Reactie = Slachtoffer + " Has shown mercy. Mogbot the Merciful lifted the curse... BOOOO !!!";
+			Reactie = " Someone has shown mercy. Mogbot the Merciful lifted the curse... BOOOO !!!";
 		}
 		else {
 			Reactie = "Mogbot the Merciful has not cursed anyone. yet..";

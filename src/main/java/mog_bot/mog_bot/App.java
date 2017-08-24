@@ -35,8 +35,12 @@ public class App extends ListenerAdapter {
 		
 		if (FilteredMessage !=null) {
 		objChannel.sendMessage(FilteredMessage).queue();
-		}
-		
+		}		
 	}
+	
+	public void finduser() {
+	}
+	
+	
 	
 }

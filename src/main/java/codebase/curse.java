@@ -56,7 +56,7 @@ public class curse {
 
 	public static String Asskisser(String Bericht, String CurseVictim) {
 
-		Curse = "Hello genious, arent you beautiful ?";
+		Curse = Asskisser(Bericht, CurseVictim);
 
 		return Curse;
 	}
