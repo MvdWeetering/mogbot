@@ -46,6 +46,10 @@ public class contentReader {
 		case "!online":
 			Reactie = "Mogbot online. hello my minions!";
 			break;
+		case "!punchline":
+			Reactie = "https://www.youtube.com/watch?v=g-4-gLlF0uw";
+			break;
+
 		case "!bringcoffee":
 			Reactie = "Get your own coffee. lazy wanker!";
 			break;
@@ -88,7 +92,10 @@ public class contentReader {
 		case "!aww":
 			Reactie = "http://gph.is/15zmlbN";
 			break;
-		
+		case "!slap":
+			Reactie = slaps.slaps();
+			break;
+			
 		case "!beer":
 			Reactie = "https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg"
 					+ "\n Bottoms up ! Or as the Dutch say: Proost !!!";
@@ -119,13 +126,17 @@ public class contentReader {
 			Reactie = "*/Kicks " + Victim + " in the balls*";
 		}
 
+		if (Bericht.contains("!8b ")) {
+			Reactie = eightball.ReturnEightBall();
+		}
+		
 		if (Bericht.contains("!curse ") && cursed == false) {
 			
 			Cursevictim = Bericht.substring(7, Bericht.length());
 			
-			if (Cursevictim.equalsIgnoreCase("Teefy") | Cursevictim.equalsIgnoreCase("Icestorm") | Cursevictim.equalsIgnoreCase("mog_no_1") | Cursevictim.equalsIgnoreCase("vuduepriest")) {
+			if (Cursevictim.equalsIgnoreCase("Teefy") | Cursevictim.equalsIgnoreCase("Icestorm") | Cursevictim.equalsIgnoreCase("mog_no_1") | Cursevictim.equalsIgnoreCase("vuduepriest") | Cursevictim.equalsIgnoreCase("commissarr")) {
 				cursed = true;
-				counter = 8;
+				counter = 3;
 				Random r = new Random();
 				//column 1
 				SelectedCurse = 1 + r.nextInt(3);
@@ -135,9 +146,7 @@ public class contentReader {
 			else {
 				Reactie = "Mogbot can't curse a ghost. Dimwit.";				
 			} 
-			
-		
-
+	
 		} else if (Bericht.contains("!curse ") && cursed == true) {
 			Reactie = "someone is already cursed. what do you think Mogbot is, a wizard ?";
 		}
@@ -182,12 +191,10 @@ public class contentReader {
 
 	public static void main(String[] args) {
 
-		System.out.println(GetContent("!curse teefy", "Teefy"));
-		System.out.println(Boolean.toString(cursed));
-		System.out.println( Integer.toString(SelectedCurse));
-		System.out.println(Cursevictim);
+		System.out.println(GetContent("!slap", "Teefy"));
+
 		
-		System.out.println( curse.CastCurse("message", "teefy"));
+	
 	}
 
 }

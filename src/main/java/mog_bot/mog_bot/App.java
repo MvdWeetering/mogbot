@@ -32,14 +32,24 @@ public class App extends ListenerAdapter {
 		User objUser = e.getAuthor();
 
 		String FilteredMessage = ContentFilter.FilteredMessge(objMsg.getContent(), objUser.getName());
-		
+
 		if (FilteredMessage !=null) {
-		objChannel.sendMessage(FilteredMessage).queue();
+			
+			try {
+				objChannel.sendMessage(FilteredMessage.replaceAll("!", "")).queue();
+			} catch (NullPointerException e1) {
+				
+				objChannel.sendMessage("ICE ! stop sabotaging my bot !!").queue();
+				
+				e1.printStackTrace();
+			}
+			
+			
+			
 		}		
 	}
 	
-	public void finduser() {
-	}
+
 	
 	
 	

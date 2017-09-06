@@ -8,11 +8,7 @@ public class curse {
 	public static String CastCurse(String Bericht, String CurseVictim) {
 
 		
-		if (contentReader.counter == 4) {
-			Curse = "*The curse is becoming weaker*";
-			contentReader.counter = contentReader.counter - 1;
-		} 
-		else if (contentReader.counter == 0) {
+		if (contentReader.counter == 0) {
 			contentReader.liftCurse(CurseVictim);
 			Curse = "*The curse has expired. awww*";
 			
@@ -28,7 +24,7 @@ public class curse {
 			CastParrot(Bericht, CurseVictim);
 			break;
 		case 3:
-			Asskisser(Bericht, CurseVictim);
+			 Asskisser(Bericht, CurseVictim);
 			break;
 		}
 		contentReader.counter = contentReader.counter -1;
@@ -56,7 +52,7 @@ public class curse {
 
 	public static String Asskisser(String Bericht, String CurseVictim) {
 
-		Curse = Asskisser(Bericht, CurseVictim);
+		Curse = AssKisser.loadCompliment();
 
 		return Curse;
 	}

@@ -23,7 +23,7 @@ public class ContentFilter {
 
 	public static void main(String[] args) {
 
-		System.out.println(FilteredMessge("!coffee", "Teefy"));
+		System.out.println(FilteredMessge("!8B ", "Teefy"));
 
 	}
 
