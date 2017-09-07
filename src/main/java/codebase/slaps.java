@@ -13,7 +13,7 @@ public class slaps {
 	public static String slaps() {
 
 		int i = 0;
-		String csvFile = "C:/mogbot/slaps.csv";
+		String csvFile = "slaps.csv";
 		BufferedReader reader = null;
 		try {
 			reader = new BufferedReader(new FileReader(csvFile));

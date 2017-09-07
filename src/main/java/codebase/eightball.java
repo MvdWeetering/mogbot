@@ -14,7 +14,7 @@ public class eightball {
 	public static String ReturnEightBall() {
 
 		int i = 0;
-		String csvFile = "C:/mogbot/8ball.csv";
+		String csvFile = "8ball.csv";
 		BufferedReader reader = null;
 		try {
 			reader = new BufferedReader(new FileReader(csvFile));

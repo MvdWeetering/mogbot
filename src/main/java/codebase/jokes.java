@@ -13,7 +13,7 @@ public class jokes {
 	public static String loadJoke() {
 
 		int i = 0;
-		String csvFile = "C:/mogbot/jokes.csv";
+		String csvFile = "jokes.csv";
 		BufferedReader reader = null;
 		try {
 			reader = new BufferedReader(new FileReader(csvFile));

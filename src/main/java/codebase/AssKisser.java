@@ -14,7 +14,7 @@ public class AssKisser {
 		public static String loadCompliment() {
 
 			int i = 0;
-			String csvFile = "C:/mogbot/compliments.csv";
+			String csvFile = "compliments.csv";
 			BufferedReader reader = null;
 			try {
 				reader = new BufferedReader(new FileReader(csvFile));
