@@ -59,6 +59,14 @@ public class contentReader {
 		case "!joke":
 			Reactie = jokes.loadJoke();
 			break;
+		case "!care":
+			Reactie = "http://www.vitamin-ha.com/wp-content/uploads/2012/05/VH-and-not-a-single-fuck-was-given-that-day-owl.jpg";
+			break;
+
+		case "!nn":
+			Reactie = "https://tenor.com/view/goodnight-cute-rollsover-collapse-falls-gif-5641950";
+			break;
+			
 		case "!name":
 			Reactie = NameGenerator.generateName();
 			break;

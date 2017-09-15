@@ -46,7 +46,4 @@ public class eightball {
 		System.out.println(ReturnEightBall());
 	}
 	
-	
-	
-	
 }
