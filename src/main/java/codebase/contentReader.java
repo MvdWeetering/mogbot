@@ -94,6 +94,9 @@ public class contentReader {
 		case "!boo":
 			Reactie = "http://gph.is/17h4Snw";
 			break;
+		case "!pink":
+			Reactie = "sheep on a rainbow !";
+			break;
 		case "!news":
 			Reactie = "yes. there's news. yey..";
 			break;
