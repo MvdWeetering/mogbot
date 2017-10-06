@@ -35,7 +35,7 @@ public class jokes {
 
 		Random r = new Random();
 
-		int choice = 1 + r.nextInt(i);
+		int choice = 0 + r.nextInt(i);
 
 		return(lines.get(choice));
 
