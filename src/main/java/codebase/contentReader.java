@@ -49,7 +49,9 @@ public class contentReader {
 		case "!punchline":
 			Reactie = "https://www.youtube.com/watch?v=g-4-gLlF0uw";
 			break;
-
+		case "!binchicken":
+			Reactie = "https://youtu.be/mO-OpFjHRbE";
+			break;
 		case "!bringcoffee":
 			Reactie = "Get your own coffee. lazy wanker!";
 			break;
@@ -71,8 +73,19 @@ public class contentReader {
 			Reactie = NameGenerator.generateName();
 			break;
 		case "!roo":
-			Reactie = "The only good Roo is the one on my dinner plate. HAHA ! ";
-			break;
+			Reactie = "https://giphy.com/gifs/kangaroo-gZjzkJEzwuB0Y";
+			break;	
+			
+		case "!shagger":
+			Reactie = "https://giphy.com/gifs/sheep-ALYS5Jq5B3XHi";
+			break;	
+			
+			
+				
+				
+		case "!trashpanda":
+			Reactie = "https://media.giphy.com/media/AB734caB4jx84/giphy.gif";
+				break;
 		case "!shitgold":
 			Reactie = "The only thing you're shitting is :poop: ! ";
 			break;
@@ -86,16 +99,13 @@ public class contentReader {
 			Reactie = "All hail our Master Wafflecunt, VuduePriest. HAIL !";
 			break;
 		case "!rooballs":
-			Reactie = "Mog eats roo balls for breakfast!";
+			Reactie = "https://giphy.com/gifs/wtf-LNiN5XDyRnlFC";
 			break;
 		case "!ibis":
 			Reactie = "http://i.imgur.com/uluX2Gd.gifv";
 			break;
 		case "!boo":
 			Reactie = "http://gph.is/17h4Snw";
-			break;
-		case "!pink":
-			Reactie = "sheep on a rainbow !";
 			break;
 		case "!news":
 			Reactie = "yes. there's news. yey..";
@@ -106,6 +116,10 @@ public class contentReader {
 		case "!slap":
 			Reactie = slaps.slaps();
 			break;
+		case "!pink":
+			Reactie = "no ! commander Squirt !!";
+			break;
+			
 			
 		case "!beer":
 			Reactie = "https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg"
