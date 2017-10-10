@@ -79,10 +79,7 @@ public class contentReader {
 		case "!shagger":
 			Reactie = "https://giphy.com/gifs/sheep-ALYS5Jq5B3XHi";
 			break;	
-			
-			
-				
-				
+		
 		case "!trashpanda":
 			Reactie = "https://media.giphy.com/media/AB734caB4jx84/giphy.gif";
 				break;
@@ -98,7 +95,7 @@ public class contentReader {
 		case "!wafflecunt":
 			Reactie = "All hail our Master Wafflecunt, VuduePriest. HAIL !";
 			break;
-		case "!rooballs":
+		case "!curgon":
 			Reactie = "https://giphy.com/gifs/wtf-LNiN5XDyRnlFC";
 			break;
 		case "!ibis":
@@ -120,7 +117,19 @@ public class contentReader {
 			Reactie = "no ! commander Squirt !!";
 			break;
 			
+		case "!who is a fuckstick":
+			Reactie = "curgon is a fuckstick";
+			break;
 			
+		case "!who licks the fuckstick":
+			Reactie = "curgon licks the fuckstick";
+			break;
+			
+		case "!lick me fuckstick":
+			Reactie = "https://www.hensnightshop.com.au/media/catalog/product/cache/5/image/650x/040ec09b1e35df139433887a97daa66f/o/r/orange-pecker-lollipop_3.jpg";
+			break;	
+			
+		
 		case "!beer":
 			Reactie = "https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg"
 					+ "\n Bottoms up ! Or as the Dutch say: Proost !!!";

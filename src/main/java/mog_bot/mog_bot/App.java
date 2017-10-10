@@ -47,9 +47,6 @@ public class App extends ListenerAdapter {
 				
 				e1.printStackTrace();
 			}
-			
-			
-			
 		}		
 	}
 	
