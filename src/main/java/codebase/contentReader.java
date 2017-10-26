@@ -22,7 +22,7 @@ public class contentReader {
 		switch (Bericht) {
 
 		case "!commands":
-			Reactie = "We have the following commands: insult,hug,online,bringcoffee,god?,joke,roo,shitgold,spider,coffee,wafflecunt,rooballs,ibis,boo,aww,beer,kick<user>,hug<user>,coffee<user>,slap<user> | All commands need an ! before them";
+			Reactie = "We have the following commands: time, hello, insult, hug, online, punchline, binchicken, bringcoffee, god?, joke, care, nn, roo, shagger, trashpanda, shitgold, spider, coffee, wafflecunt, curgon, ibis, boo, news, aww, slap, pink, dankie, teefy, who is a fuckstick, who licks the fuckstick, lick me fuckstick, drongo, beer, ragequit, kick<user>, 8b<text>, hug<user>, slap<user>, coffee | All commands need an ! before them";
 			break;
 		case "!hello":
 
@@ -61,6 +61,19 @@ public class contentReader {
 		case "!joke":
 			Reactie = jokes.loadJoke();
 			break;
+
+		case "!time":
+			java.util.TimeZone tz = java.util.TimeZone.getTimeZone("GMT+6");
+			java.util.Calendar c = java.util.Calendar.getInstance(tz);
+
+			String Time = "Teefy: " + time.GetTime("Europe/Amsterdam") + System.lineSeparator() + "Rotor & Mog: " + time.GetTime("Australia/Adelaide"); 
+			Reactie = Time;
+			break;
+			
+		case "!bored":
+			Reactie = "https://giphy.com/gifs/tumbleweed-landscape-5x89XRx3sBZFC";
+			break;
+		
 		case "!care":
 			Reactie = "http://www.vitamin-ha.com/wp-content/uploads/2012/05/VH-and-not-a-single-fuck-was-given-that-day-owl.jpg";
 			break;
@@ -117,6 +130,13 @@ public class contentReader {
 			Reactie = "no ! commander Squirt !!";
 			break;
 			
+		case "!dankie":
+			Reactie = "http://aforgrave.ca/detritus/wp-content/uploads/2012/12/Beaker6_280.gif";
+			break;	
+			
+		case "!teefy":
+			Reactie = Teefy.Lazy();
+			break;
 		case "!who is a fuckstick":
 			Reactie = "curgon is a fuckstick";
 			break;
@@ -128,7 +148,10 @@ public class contentReader {
 		case "!lick me fuckstick":
 			Reactie = "https://www.hensnightshop.com.au/media/catalog/product/cache/5/image/650x/040ec09b1e35df139433887a97daa66f/o/r/orange-pecker-lollipop_3.jpg";
 			break;	
-			
+
+		case "!drongo":
+			Reactie = "https://www.youtube.com/watch?v=tEYCjJqr21A";
+			break;	
 		
 		case "!beer":
 			Reactie = "https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg"
@@ -150,6 +173,10 @@ public class contentReader {
 
 			break;
 
+		case "!ragequit":
+			Reactie = ragequit.RageQuit();
+			break;	
+			
 		// https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg
 
 		}
