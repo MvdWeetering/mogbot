@@ -22,7 +22,7 @@ public class contentReader {
 		switch (Bericht) {
 
 		case "!commands":
-			Reactie = "We have the following commands: time, hello, insult, hug, online, punchline, binchicken, bringcoffee, god?, joke, care, nn, roo, shagger, trashpanda, shitgold, spider, coffee, wafflecunt, curgon, ibis, boo, news, aww, slap, pink, dankie, teefy, who is a fuckstick, who licks the fuckstick, lick me fuckstick, drongo, beer, ragequit, kick<user>, 8b<text>, hug<user>, slap<user>, coffee | All commands need an ! before them";
+			Reactie = "We have the following commands: rev, time, hello, insult, hug, online, punchline, binchicken, bringcoffee, god?, joke, care, nn, roo, shagger, trashpanda, shitgold, spider, coffee, wafflecunt, curgon, ibis, boo, news, aww, slap, pink, dankie, teefy, who is a fuckstick, who licks the fuckstick, lick me fuckstick, drongo, beer, ragequit, kick<user>, 8b<text>, hug<user>, slap<user>, coffee | All commands need an ! before them";
 			break;
 		case "!hello":
 
@@ -36,7 +36,10 @@ public class contentReader {
 				Reactie = "Hello, " + Gebruiker + ". Its good to see the plebs has found their way here";
 			}
 			break;
-
+				
+		case "!rev":
+			Reactie = "http://stream1.gifsoup.com/view6/2789483/sub-zero-fatality-2-o.gif";
+			break;			
 		case "!insult":
 			Reactie = "Fuck off, you " + loadInsults.returnInsult();
 			break;
@@ -66,7 +69,16 @@ public class contentReader {
 			java.util.TimeZone tz = java.util.TimeZone.getTimeZone("GMT+6");
 			java.util.Calendar c = java.util.Calendar.getInstance(tz);
 
-			String Time = "Teefy: " + time.GetTime("Europe/Amsterdam") + System.lineSeparator() + "Rotor & Mog: " + time.GetTime("Australia/Adelaide"); 
+			String Time = 
+					 
+					"Rotor & Mog & mc_fatigue: " + time.GetTime("Australia/Adelaide") +System.lineSeparator()
+					+ "Chippy & Phoenix: " + time.GetTime("Australia/Queensland") +System.lineSeparator()
+					+ "Teefy: " + time.GetTime("Europe/Amsterdam") + System.lineSeparator()
+					+ "Ice & Void: " + time.GetTime("Europe/London") +System.lineSeparator()
+					+ "Rev & Dankie & Bonbon & Ganga: " + time.GetTime("America/Detroit") +System.lineSeparator()
+					+ "Vudue & Curgon: " + time.GetTime("GMT-6") +System.lineSeparator()
+										 
+					; 
 			Reactie = Time;
 			break;
 			
