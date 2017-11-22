@@ -52,6 +52,9 @@ public class contentReader {
 		case "!punchline":
 			Reactie = "https://www.youtube.com/watch?v=g-4-gLlF0uw";
 			break;
+		case "!wtf":
+			Reactie = "http://gph.is/2j3rbK0";
+			break;
 		case "!binchicken":
 			Reactie = "https://youtu.be/mO-OpFjHRbE";
 			break;
