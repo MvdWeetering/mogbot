@@ -36,7 +36,11 @@ public class contentReader {
 				Reactie = "Hello, " + Gebruiker + ". Its good to see the plebs has found their way here";
 			}
 			break;
-				
+												
+		case "!butt":
+			Reactie = "http://i64.tinypic.com/30s7uhd.png";
+			break;			
+			
 		case "!rev":
 			Reactie = "http://stream1.gifsoup.com/view6/2789483/sub-zero-fatality-2-o.gif";
 			break;			
@@ -203,7 +207,15 @@ public class contentReader {
 		}
 
 		if (Bericht.contains("!8b ")) {
+			
+			if(Bericht.contains("teefy")) {
+				
+				Reactie = eightball.ReturnEightBallTeefy();
+			}
+				
+			else {
 			Reactie = eightball.ReturnEightBall();
+			}
 		}
 		
 		if (Bericht.contains("!curse ") && cursed == false) {
