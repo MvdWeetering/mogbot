@@ -28,7 +28,7 @@ public class contentReader {
 
 			if (Gebruiker.equalsIgnoreCase("Teefy")) {
 				Reactie = "Hello, beautiful /wink";
-			} else if (Gebruiker.equalsIgnoreCase("Icestorm")) {
+			} else if (Gebruiker.equalsIgnoreCase("Icestormer")) {
 				Reactie = "Hello, you Manly Man";
 			} else if (Gebruiker.equalsIgnoreCase("Mog_no_1")) {
 				Reactie = "All bow before the Great Leader and Master ! hi Mog :)";
@@ -40,6 +40,15 @@ public class contentReader {
 		case "!butt":
 			Reactie = "http://i64.tinypic.com/30s7uhd.png";
 			break;			
+
+		case "!stfu":
+			Reactie = stfu.stfu();
+			break;			
+
+		case "!yay":
+			Reactie = "https://media.giphy.com/media/3oFzmm2tb3OzC8Lhjq/giphy.gif";
+			break;	
+			
 			
 		case "!rev":
 			Reactie = "http://stream1.gifsoup.com/view6/2789483/sub-zero-fatality-2-o.gif";
