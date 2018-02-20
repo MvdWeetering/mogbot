@@ -41,6 +41,10 @@ public class contentReader {
 			Reactie = "http://i64.tinypic.com/30s7uhd.png";
 			break;			
 
+		case "!rotor":
+			Reactie = "https://www.youtube.com/watch?v=xVR4bkyMykA";
+			break;	
+			
 		case "!stfu":
 			Reactie = stfu.stfu();
 			break;			
@@ -91,7 +95,7 @@ public class contentReader {
 					+ "Chippy & Phoenix: " + time.GetTime("Australia/Queensland") +System.lineSeparator()
 					+ "Teefy: " + time.GetTime("Europe/Amsterdam") + System.lineSeparator()
 					+ "Ice & Void: " + time.GetTime("Europe/London") +System.lineSeparator()
-					+ "Rev & Dankie & Bonbon & Ganga: " + time.GetTime("America/Detroit") +System.lineSeparator()
+					+ "Rev & Dankie & Bonbon & Arc: " + time.GetTime("America/Detroit") +System.lineSeparator()
 					+ "Vudue & Curgon: " + time.GetTime("GMT-6") +System.lineSeparator()
 										 
 					; 
