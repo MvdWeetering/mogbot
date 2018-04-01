@@ -33,6 +33,6 @@ public class time {
 
 	public static void main(String[] args) {
 
-		System.out.println(GetTime("GMT-6"));
+		System.out.println(GetTime("America/Chicago"));
 	}
 }

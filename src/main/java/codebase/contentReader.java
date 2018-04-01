@@ -28,7 +28,7 @@ public class contentReader {
 
 			if (Gebruiker.equalsIgnoreCase("Teefy")) {
 				Reactie = "Hello, beautiful /wink";
-			} else if (Gebruiker.equalsIgnoreCase("Icestormer")) {
+			} else if (Gebruiker.equalsIgnoreCase("Icestormers")) {
 				Reactie = "Hello, you Manly Man";
 			} else if (Gebruiker.equalsIgnoreCase("Mog_no_1")) {
 				Reactie = "All bow before the Great Leader and Master ! hi Mog :)";
@@ -36,7 +36,12 @@ public class contentReader {
 				Reactie = "Hello, " + Gebruiker + ". Its good to see the plebs has found their way here";
 			}
 			break;
-												
+
+		case "!zone":
+			Reactie = Timezonestuff.getTimezoneData().toString();
+			
+			break;		
+			
 		case "!butt":
 			Reactie = "http://i64.tinypic.com/30s7uhd.png";
 			break;			
@@ -55,7 +60,7 @@ public class contentReader {
 			
 			
 		case "!rev":
-			Reactie = "http://stream1.gifsoup.com/view6/2789483/sub-zero-fatality-2-o.gif";
+			Reactie = "https://gph.is/2pNNsii";
 			break;			
 		case "!insult":
 			Reactie = "Fuck off, you " + loadInsults.returnInsult();
@@ -95,9 +100,8 @@ public class contentReader {
 					+ "Chippy & Phoenix: " + time.GetTime("Australia/Queensland") +System.lineSeparator()
 					+ "Teefy: " + time.GetTime("Europe/Amsterdam") + System.lineSeparator()
 					+ "Ice & Void: " + time.GetTime("Europe/London") +System.lineSeparator()
-					+ "Rev & Dankie & Bonbon & Arc: " + time.GetTime("America/Detroit") +System.lineSeparator()
-					+ "Vudue & Curgon: " + time.GetTime("GMT-6") +System.lineSeparator()
-										 
+					+ "Rev & Dankie & Bonbon & Arc: " + time.GetTime("America/New_York") +System.lineSeparator()
+					+ "Vudue: " + time.GetTime("America/Chicago") +System.lineSeparator()
 					; 
 			Reactie = Time;
 			break;
@@ -163,7 +167,7 @@ public class contentReader {
 			break;
 			
 		case "!dankie":
-			Reactie = "http://aforgrave.ca/detritus/wp-content/uploads/2012/12/Beaker6_280.gif";
+			Reactie = "https://gph.is/2IRxYlS";
 			break;	
 			
 		case "!teefy":

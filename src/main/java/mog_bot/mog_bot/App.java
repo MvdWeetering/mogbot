@@ -23,9 +23,7 @@ public class App extends ListenerAdapter {
 				.setToken("MzQ1NTUzMDQ3NzcxOTM4ODE5.DG89Aw.Nr3x3_M3yjXBpl2viDUa1qfZoDc").buildBlocking();
 		
 		jdaBot.addEventListener(new App());
-		JDA jdaBot2 = new JDABuilder(AccountType.BOT)
-		.setToken("MzU3NDE4NjgwMzc3OTMzODI1.DJpueA.kVyrm4qqYYanBn1-7cbGM5uPYUU").buildBlocking();
-		jdaBot2.addEventListener(new App());
+
 	}
 
 	@Override
