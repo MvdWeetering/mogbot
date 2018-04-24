@@ -95,12 +95,13 @@ public class contentReader {
 			java.util.Calendar c = java.util.Calendar.getInstance(tz);
 
 			String Time = 
-					 
+					
 					"Rotor & Mog & mc_fatigue: " + time.GetTime("Australia/Adelaide") +System.lineSeparator()
 					+ "Chippy & Phoenix: " + time.GetTime("Australia/Queensland") +System.lineSeparator()
 					+ "Teefy: " + time.GetTime("Europe/Amsterdam") + System.lineSeparator()
 					+ "Ice & Void: " + time.GetTime("Europe/London") +System.lineSeparator()
 					+ "Rev & Dankie & Bonbon & Arc: " + time.GetTime("America/New_York") +System.lineSeparator()
+					+ "Novak: " + time.GetTime("America/Los_Angeles") +System.lineSeparator()
 					+ "Vudue: " + time.GetTime("America/Chicago") +System.lineSeparator()
 					; 
 			Reactie = Time;
@@ -296,7 +297,7 @@ public class contentReader {
 
 	public static void main(String[] args) {
 
-		System.out.println(GetContent("!slap", "Teefy"));
+		System.out.println(GetContent("!time", "Teefy"));
 
 		
 	
