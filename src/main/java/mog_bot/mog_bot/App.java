@@ -39,9 +39,7 @@ public class App extends ListenerAdapter {
 			try {
 				objChannel.sendMessage(FilteredMessage.replaceAll("!", "")).queue();
 			} catch (NullPointerException e1) {
-				
 				objChannel.sendMessage("ICE ! stop sabotaging my bot !!").queue();
-				
 				e1.printStackTrace();
 			}
 		}		

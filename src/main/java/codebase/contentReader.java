@@ -42,6 +42,10 @@ public class contentReader {
 			
 			break;		
 			
+		case "!morning":
+			Reactie = "https://i0.wp.com/ilovemessages.org/wp-content/uploads/2017/08/good-morning-image-with-a-sweet-sense-of-humor.jpg?ssl=1";
+			break;		
+			
 		case "!butt":
 			Reactie = "http://i64.tinypic.com/30s7uhd.png";
 			break;			
