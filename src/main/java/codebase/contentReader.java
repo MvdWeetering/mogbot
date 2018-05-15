@@ -22,7 +22,7 @@ public class contentReader {
 		switch (Bericht) {
 
 		case "!commands":
-			Reactie = "We have the following commands: rev, time, hello, insult, hug, online, punchline, binchicken, bringcoffee, god?, joke, care, nn, roo, shagger, trashpanda, shitgold, spider, coffee, wafflecunt, curgon, ibis, boo, news, aww, slap, pink, dankie, teefy, who is a fuckstick, who licks the fuckstick, lick me fuckstick, drongo, beer, ragequit, kick<user>, 8b<text>, hug<user>, slap<user>, coffee | All commands need an ! before them";
+			Reactie = "We have the following commands: javelin, yay, morning, rev, time, hello, insult, hug, online, punchline, binchicken, bringcoffee, god?, joke, care, nn, roo, shagger, trashpanda, shitgold, spider, coffee, wafflecunt, curgon, ibis, boo, news, aww, slap, pink, dankie, teefy, who is a fuckstick, who licks the fuckstick, lick me fuckstick, drongo, beer, ragequit, kick<user>, 8b<text>, hug<user>, slap<user>, coffee | All commands need an ! before them";
 			break;
 		case "!hello":
 
@@ -58,6 +58,11 @@ public class contentReader {
 			Reactie = stfu.stfu();
 			break;			
 
+		case "!javelin":
+			Reactie = "https://imgur.com/a/yQm7su6";
+			break;
+					
+			
 		case "!yay":
 			Reactie = "https://media.giphy.com/media/3oFzmm2tb3OzC8Lhjq/giphy.gif";
 			break;	
