@@ -42,10 +42,6 @@ public class contentReader {
 			
 			break;		
 			
-		case "!morning":
-			Reactie = "https://i0.wp.com/ilovemessages.org/wp-content/uploads/2017/08/good-morning-image-with-a-sweet-sense-of-humor.jpg?ssl=1";
-			break;		
-			
 		case "!butt":
 			Reactie = "http://i64.tinypic.com/30s7uhd.png";
 			break;			
@@ -61,7 +57,15 @@ public class contentReader {
 		case "!javelin":
 			Reactie = "https://imgur.com/a/yQm7su6";
 			break;
-					
+			
+		case "!morning":
+			Reactie = "https://imgur.com/a/mIMHnl2";
+			break;
+			
+		case "!quite":
+			Reactie = "https://imgur.com/a/ueZmNKU";
+			break;
+				
 			
 		case "!yay":
 			Reactie = "https://media.giphy.com/media/3oFzmm2tb3OzC8Lhjq/giphy.gif";
@@ -105,13 +109,12 @@ public class contentReader {
 
 			String Time = 
 					
-					"Rotor & Mog & mc_fatigue: " + time.GetTime("Australia/Adelaide") +System.lineSeparator()
-					+ "Chippy & Phoenix: " + time.GetTime("Australia/Queensland") +System.lineSeparator()
-					+ "Teefy: " + time.GetTime("Europe/Amsterdam") + System.lineSeparator()
+					"Rotor & Mog & mc_fatigue: " + time.GetTime("Australia/Sydney") +System.lineSeparator()
+					+ "Chippy & Phoenix & Crispy: " + time.GetTime("Australia/Queensland") +System.lineSeparator()
 					+ "Ice & Void: " + time.GetTime("Europe/London") +System.lineSeparator()
-					+ "Rev & Dankie & Bonbon & Arc: " + time.GetTime("America/New_York") +System.lineSeparator()
-					+ "Novak: " + time.GetTime("America/Los_Angeles") +System.lineSeparator()
+					+ "Teefy: " + time.GetTime("Europe/Amsterdam") + System.lineSeparator()
 					+ "Vudue: " + time.GetTime("America/Chicago") +System.lineSeparator()
+					+ "Rev & Dankie: " + time.GetTime("America/New_York") +System.lineSeparator()
 					; 
 			Reactie = Time;
 			break;
