@@ -42,6 +42,10 @@ public class contentReader {
 			
 			break;		
 			
+		case "!cintara":
+			Reactie = "https://imgur.com/a/ss5NTue";
+			break;
+			
 		case "!butt":
 			Reactie = "http://i64.tinypic.com/30s7uhd.png";
 			break;			
@@ -110,9 +114,9 @@ public class contentReader {
 			String Time = 
 					
 					"Rotor & Mog & mc_fatigue: " + time.GetTime("Australia/Sydney") +System.lineSeparator()
-					+ "Chippy & Phoenix & Crispy: " + time.GetTime("Australia/Queensland") +System.lineSeparator()
+					+ "Chippy & Phoenix & Chrispy: " + time.GetTime("Australia/Queensland") +System.lineSeparator()
 					+ "Ice & Void: " + time.GetTime("Europe/London") +System.lineSeparator()
-					+ "Teefy: " + time.GetTime("Europe/Amsterdam") + System.lineSeparator()
+					+ "Teefy & Cintara: " + time.GetTime("Europe/Amsterdam") + System.lineSeparator()
 					+ "Vudue: " + time.GetTime("America/Chicago") +System.lineSeparator()
 					+ "Rev & Dankie: " + time.GetTime("America/New_York") +System.lineSeparator()
 					; 
