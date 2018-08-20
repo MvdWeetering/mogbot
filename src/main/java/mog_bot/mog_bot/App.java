@@ -20,7 +20,7 @@ public class App extends ListenerAdapter {
 	public static void main(String[] args)
 			throws LoginException, IllegalArgumentException, InterruptedException, RateLimitedException {
 		JDA jdaBot = new JDABuilder(AccountType.BOT)
-				.setToken("MzQ1NTUzMDQ3NzcxOTM4ODE5.DG89Aw.Nr3x3_M3yjXBpl2viDUa1qfZoDc").buildBlocking();
+				.setToken("NDgwOTc5ODY4NzIxMzQ4NjI5.DlvrGw.8xPFkyc4AAva8aYK27AghsPXAYI").buildBlocking();
 		jdaBot.addEventListener(new App());
 
 	}
