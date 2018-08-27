@@ -54,7 +54,9 @@ public class contentReader {
 			Reactie = "https://gph.is/2krvPnU";
 			break;
 
-
+		case "!aspen":
+			Reactie = grumpy.snark();
+			break;
 			
 		case "!mog":
 			Reactie = "https://media.giphy.com/media/qUDrfc1q5BM4w/giphy-downsized-large.gif";
@@ -93,10 +95,10 @@ public class contentReader {
 			Reactie = "https://gph.is/2MfE1WI";
 			break;	
 			
-
-		case "!aspen":
-			Reactie = "https://imgur.com/a/cU7L4Fy";
-			break;	
+//
+//		case "!aspen":
+//			Reactie = "https://imgur.com/a/cU7L4Fy";
+//			break;	
 
 		case "!stfu":
 			Reactie = stfu.stfu();
