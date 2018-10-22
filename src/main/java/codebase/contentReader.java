@@ -37,17 +37,51 @@ public class contentReader {
 			}
 			break;
 
-		case "!zone":
-			Reactie = Timezonestuff.getTimezoneData().toString();
-
+		case "!shame":
+			Reactie = "https://media.tenor.com/images/b8ecdafa8469b57e1497fa7264f3638a/tenor.gif";
 			break;
 
+		case "!yes":
+			Reactie = "https://gph.is/2RYUmyh";
+			break;
+			
+		case "!ree":
+			Reactie = "https://imgur.com/a/prnlz9k";
+			break;
+			
+			
+			
+			
+		case "!zone":
+			Reactie = Timezonestuff.getTimezoneData().toString();
+			break;
+
+		case "!nope":
+			Reactie = "https://tenor.com/tRI3.gif";
+			break;
+
+		case "!friend":
+						
+			if (Gebruiker.equalsIgnoreCase("Rotorboy")) {
+				Reactie = "no. cunt.";
+			}
+			else {
+				Reactie = "https://tenor.com/R019.gif";
+			}
+			
+			
+			break;
+			
 		case "!hi":
 			Reactie = "	https://gph.is/2OhO4In";
 			break;
 
+		case "!mercury":
+			Reactie = "https://gph.is/2p33hkV";
+			break;
+
 		case "!chrispy":
-			Reactie = "https://imgur.com/a/cB3DF1E";
+			Reactie = "https://giphy.com/gifs/movie-the-godfather-francis-ford-coppola-l0Iy5Wa8fkAewhfW0";
 			break;
 
 		case "!dog":
@@ -57,11 +91,11 @@ public class contentReader {
 		case "!aspen":
 			Reactie = grumpy.snark();
 			break;
-			
+
 		case "!mog":
 			Reactie = "https://media.giphy.com/media/qUDrfc1q5BM4w/giphy-downsized-large.gif";
 			break;
-		
+
 		case "!boom":
 			Reactie = "https://gph.is/2MgdAR0";
 			break;
@@ -69,13 +103,17 @@ public class contentReader {
 		case "!chippy":
 			Reactie = "https://gph.is/2P9TrK7";
 			break;
-			
+
 		case "!facepalm":
 			Reactie = "https://gph.is/2pbhdJ3";
 			break;
-			
+
+		case "!banshee":
+			Reactie = "https://imgur.com/a/vqEf9VE";
+			break;
+
 		case "!cintara":
-			//Reactie = "https://imgur.com/a/vqEf9VE";
+			// Reactie = "https://imgur.com/a/vqEf9VE";
 			Reactie = "https://imgur.com/a/ss5NTue";
 			break;
 
@@ -86,15 +124,15 @@ public class contentReader {
 		case "!fuckingrotor":
 			Reactie = "https://imgur.com/a/rP8XP6n";
 			break;
-			
+
 		case "!rotor":
 			Reactie = "https://gph.is/2vKvIrB";
 			break;
-			
+
 		case "!phoenix":
 			Reactie = "https://gph.is/2MfE1WI";
-			break;	
-			
+			break;
+
 //
 //		case "!aspen":
 //			Reactie = "https://imgur.com/a/cU7L4Fy";
@@ -281,7 +319,15 @@ public class contentReader {
 		if (Bericht.contains("!kick ")) {
 			String Victim = null;
 			Victim = Bericht.substring(6, Bericht.length());
+				
+			if (Victim.equalsIgnoreCase("@cin")) {
+				Reactie = "*/Kicks " + Victim + " in the hemeroids*";
+			} 
+			else {
 			Reactie = "*/Kicks " + Victim + " in the balls*";
+			}
+			
+			
 		}
 
 		if (Bericht.contains("!8b ")) {
@@ -300,9 +346,19 @@ public class contentReader {
 
 			Cursevictim = Bericht.substring(7, Bericht.length());
 
-			if (Cursevictim.equalsIgnoreCase("Teefy") | Cursevictim.equalsIgnoreCase("Icestorm")
-					| Cursevictim.equalsIgnoreCase("mog_no_1") | Cursevictim.equalsIgnoreCase("vuduepriest")
-					| Cursevictim.equalsIgnoreCase("commissarr")) {
+			if (Cursevictim.equalsIgnoreCase("Teefy") 
+				| Cursevictim.equalsIgnoreCase("Icestormers")
+				| Cursevictim.equalsIgnoreCase("mog_no_1") 
+				| Cursevictim.equalsIgnoreCase("vuduepriest")
+				| Cursevictim.equalsIgnoreCase("rotorboy") 
+				| Cursevictim.equalsIgnoreCase("cintara")
+				| Cursevictim.equalsIgnoreCase("voidslicer")
+				| Cursevictim.equalsIgnoreCase("chippy_x")
+				| Cursevictim.equalsIgnoreCase("phoenix_x")
+				| Cursevictim.equalsIgnoreCase("revoxxer")
+				| Cursevictim.equalsIgnoreCase("dankie")
+				| Cursevictim.equalsIgnoreCase("chrispykoala"))
+			{
 				cursed = true;
 				counter = 3;
 				Random r = new Random();
@@ -355,7 +411,7 @@ public class contentReader {
 
 	public static void main(String[] args) {
 
-		System.out.println(GetContent("!time", "Teefy"));
+		System.out.println(GetContent("!kick adsf", "teefy"));
 
 	}
 
