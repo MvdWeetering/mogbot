@@ -4,77 +4,52 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class eightball {
 
 
 	public static String ReturnEightBall() {
 
-		int i = 0;
 		String csvFile = "8ball.csv";
-		BufferedReader reader = null;
+
+		List<Object> lines = null;
 		try {
-			reader = new BufferedReader(new FileReader(csvFile));
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		List<String> lines = new ArrayList<>();
-		String line = null;
-		try {
-			while ((line = reader.readLine()) != null) {
-				lines.add(line);
-				i = i +1;
-			}
+			lines = Files.lines(Paths.get(csvFile)).collect(Collectors.toList());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		Random r = new Random();
-
-		int choice = 0 + r.nextInt(i);
-
-		return(lines.get(choice));
-
+		 Random r = new Random();
+		 int choice = 0 + r.nextInt(lines.size());
+		 return (String) (lines.get(choice));
+	
 	}
 
 	
+	
 	public static String ReturnEightBallTeefy() {
 
-		int i = 0;
-		String csvFile = "8ballTeefy.csv";
-		BufferedReader reader = null;
+		String csvFile = "8ballteefy.csv";
+
+		List<Object> lines = null;
 		try {
-			reader = new BufferedReader(new FileReader(csvFile));
-		} catch (FileNotFoundException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		List<String> lines = new ArrayList<>();
-		String line = null;
-		try {
-			while ((line = reader.readLine()) != null) {
-				lines.add(line);
-				i = i +1;
-			}
+			lines = Files.lines(Paths.get(csvFile)).collect(Collectors.toList());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		Random r = new Random();
-
-		int choice = 0 + r.nextInt(i);
-
-		return(lines.get(choice));
-
+		 Random r = new Random();
+		 int choice = 0 + r.nextInt(lines.size());
+		 return (String) (lines.get(choice));
+	
 	}
-
 	public static void main(String[] args) {
-		System.out.println(ReturnEightBallTeefy());
+		System.out.println(ReturnEightBall());
 	}
 }

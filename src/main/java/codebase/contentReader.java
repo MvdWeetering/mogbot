@@ -49,6 +49,9 @@ public class contentReader {
 			Reactie = "https://imgur.com/a/prnlz9k";
 			break;
 			
+		case "!grats":
+			Reactie = "https://giphy.com/gifs/carnaval-carnival-dance-10hO3rDNqqg2Xe";
+			break;
 			
 			
 			
@@ -114,7 +117,9 @@ public class contentReader {
 
 		case "!cintara":
 			// Reactie = "https://imgur.com/a/vqEf9VE";
-			Reactie = "https://imgur.com/a/ss5NTue";
+			// Reactie = "https://imgur.com/a/ss5NTue";
+			Reactie = cintara.Cintara();
+			
 			break;
 
 		case "!butt":
