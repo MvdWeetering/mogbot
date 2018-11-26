@@ -64,15 +64,7 @@ public class contentReader {
 			break;
 
 		case "!friend":
-						
-			if (Gebruiker.equalsIgnoreCase("Rotorboy")) {
-				Reactie = "no. cunt.";
-			}
-			else {
-				Reactie = "https://tenor.com/R019.gif";
-			}
-			
-			
+			Reactie = "https://tenor.com/R019.gif";
 			break;
 			
 		case "!hi":
@@ -92,7 +84,7 @@ public class contentReader {
 			break;
 
 		case "!aspen":
-			Reactie = grumpy.snark();
+			Reactie = randomcsv.RandomCSV("grumpy.csv");
 			break;
 
 		case "!mog":
@@ -118,7 +110,7 @@ public class contentReader {
 		case "!cintara":
 			// Reactie = "https://imgur.com/a/vqEf9VE";
 			// Reactie = "https://imgur.com/a/ss5NTue";
-			Reactie = cintara.Cintara();
+			Reactie = "https://imgur.com/a/ss5NTue";
 			
 			break;
 
@@ -144,7 +136,7 @@ public class contentReader {
 //			break;	
 
 		case "!stfu":
-			Reactie = stfu.stfu();
+			Reactie = randomcsv.RandomCSV("stfu.csv");
 			break;
 
 		case "!javelin":
@@ -191,7 +183,7 @@ public class contentReader {
 			Reactie = "All bow before the overlord, Our Saviour, Mog the Merciful, the Bringer of Pain and Suffering !";
 			break;
 		case "!joke":
-			Reactie = jokes.loadJoke();
+			Reactie = randomcsv.RandomCSV("jokes.csv");
 			break;
 
 		case "!time":
@@ -264,7 +256,7 @@ public class contentReader {
 			Reactie = "http://gph.is/15zmlbN";
 			break;
 		case "!slap":
-			Reactie = slaps.slaps();
+			Reactie = randomcsv.RandomCSV("slaps.csv");
 			break;
 		case "!pink":
 			Reactie = "no ! commander Squirt !!";
@@ -275,7 +267,7 @@ public class contentReader {
 			break;
 
 		case "!teefy":
-			Reactie = Teefy.Lazy();
+			Reactie = randomcsv.RandomCSV("Teefy.csv");
 			break;
 		case "!who is a fuckstick":
 			Reactie = "curgon is a fuckstick";
@@ -308,13 +300,11 @@ public class contentReader {
 			break;
 
 		case "!liftcurse":
-
 			Reactie = liftCurse(Cursevictim);
-
 			break;
 
 		case "!ragequit":
-			Reactie = ragequit.RageQuit();
+			Reactie = randomcsv.RandomCSV("ragequit.csv");
 			break;
 
 		// https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg
@@ -339,12 +329,11 @@ public class contentReader {
 
 			if (Bericht.contains("teefy")) {
 
-				Reactie = eightball.ReturnEightBallTeefy();
+				Reactie = randomcsv.RandomCSV("8ballTeefy.csv");
 			}
 
 			else {
-				Reactie = eightball.ReturnEightBall();
-			}
+				Reactie = randomcsv.RandomCSV("8ball.csv");			}
 		}
 
 		if (Bericht.contains("!curse ") && cursed == false) {
