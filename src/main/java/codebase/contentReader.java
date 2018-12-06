@@ -107,6 +107,18 @@ public class contentReader {
 			Reactie = "https://imgur.com/a/vqEf9VE";
 			break;
 
+			
+	
+			
+			
+		case "!unicorn":
+			// Reactie = "https://imgur.com/a/vqEf9VE";
+			// Reactie = "https://imgur.com/a/ss5NTue";
+			Reactie = randomcsv.RandomCSV("unicorn.csv");
+			
+			break;
+	
+			
 		case "!cintara":
 			// Reactie = "https://imgur.com/a/vqEf9VE";
 			// Reactie = "https://imgur.com/a/ss5NTue";
@@ -144,7 +156,8 @@ public class contentReader {
 			break;
 
 		case "!morning":
-			Reactie = "https://imgur.com/a/mIMHnl2";
+			Reactie = "https://gph.is/2oWvgCo";
+			
 			break;
 
 		case "!quite":
@@ -191,13 +204,11 @@ public class contentReader {
 			java.util.Calendar c = java.util.Calendar.getInstance(tz);
 
 			String Time =
-
-					"Rotor & Mog & mc_fatigue: " + time.GetTime("Australia/Adelaide") + System.lineSeparator()
-							+ "Chippy & Phoenix & Chrispy: " + time.GetTime("Australia/Queensland")
-							+ System.lineSeparator() + "Ice & Void: " + time.GetTime("Europe/London")
+					"Mog: " + time.GetTime("Australia/Adelaide")  
+							+ System.lineSeparator() + "Chrispy: " + time.GetTime("Australia/Sydney")
+							+ System.lineSeparator() + "Ice: " + time.GetTime("Europe/London")
 							+ System.lineSeparator() + "Teefy & Cintara: " + time.GetTime("Europe/Amsterdam")
 							+ System.lineSeparator() + "Vudue: " + time.GetTime("America/Chicago")
-							+ System.lineSeparator() + "Rev & Dankie: " + time.GetTime("America/New_York")
 							+ System.lineSeparator();
 			Reactie = Time;
 			break;
@@ -211,7 +222,7 @@ public class contentReader {
 			break;
 
 		case "!nn":
-			Reactie = "https://tenor.com/view/goodnight-cute-rollsover-collapse-falls-gif-5641950";
+			Reactie =  randomcsv.RandomCSV("nn.csv");
 			break;
 
 		case "!name":
@@ -285,6 +296,11 @@ public class contentReader {
 			Reactie = "https://www.youtube.com/watch?v=tEYCjJqr21A";
 			break;
 
+		case "!chrispypays":
+			Reactie = "https://cdn.discordapp.com/attachments/346287163995848706/516554939808481280/giphy_2.gif";
+			break;
+			
+			
 		case "!beer":
 			Reactie = "https://cruxnow.com/wp-content/uploads/2017/03/Beer_Credit_Africa_Studio_Shutterstock_CNA.jpeg"
 					+ "\n Bottoms up ! Or as the Dutch say: Proost !!!";
@@ -405,7 +421,7 @@ public class contentReader {
 
 	public static void main(String[] args) {
 
-		System.out.println(GetContent("!kick adsf", "teefy"));
+		System.out.println(GetContent("!time", "teefy"));
 
 	}
 
