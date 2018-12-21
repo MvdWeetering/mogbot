@@ -55,6 +55,14 @@ public class contentReader {
 			
 			
 			
+				
+				
+		case "!size":
+			Reactie = "https://imgur.com/a/5TEJYeu";
+			break;
+				
+				
+				
 		case "!zone":
 			Reactie = Timezonestuff.getTimezoneData().toString();
 			break;
@@ -156,7 +164,7 @@ public class contentReader {
 			break;
 
 		case "!morning":
-			Reactie = "https://gph.is/2oWvgCo";
+			Reactie = "https://tenor.com/view/morning-bugsbunny-gif-3477317";
 			
 			break;
 
@@ -206,7 +214,7 @@ public class contentReader {
 			String Time =
 					"Mog: " + time.GetTime("Australia/Adelaide")  
 							+ System.lineSeparator() + "Chrispy: " + time.GetTime("Australia/Sydney")
-							+ System.lineSeparator() + "Ice: " + time.GetTime("Europe/London")
+							+ System.lineSeparator() + "Ice & Void: " + time.GetTime("Europe/London")
 							+ System.lineSeparator() + "Teefy & Cintara: " + time.GetTime("Europe/Amsterdam")
 							+ System.lineSeparator() + "Vudue: " + time.GetTime("America/Chicago")
 							+ System.lineSeparator();
