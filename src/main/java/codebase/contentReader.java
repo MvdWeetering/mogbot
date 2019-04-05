@@ -1,5 +1,7 @@
 package codebase;
 
+import java.awt.Color;
+import java.io.IOException;
 import java.util.Random;
 import java.util.function.IntSupplier;
 
@@ -37,6 +39,43 @@ public class contentReader {
 			}
 			break;
 
+			
+		case "!engage":
+		
+			DiscordWebhook webhook = new DiscordWebhook("https://discordapp.com/api/webhooks/563620904635203618/Yg9-I3-stTOh6h9rX3Ko6WBQMf7fGYSmAjxt0kot2nb76kN4aZe7I-3BhmUZKUGEZzma");
+		    webhook.setContent("Any message!");
+		    webhook.setAvatarUrl("https://your.awesome/image.png");
+		    webhook.setUsername("Custom Usernames!");
+		    webhook.setTts(true);
+		    webhook.addEmbed(new DiscordWebhook.EmbedObject()
+		            .setTitle("Title")
+		            .setDescription("This is a description")
+		            .setColor(Color.RED)
+		            .addField("1st Field", "Inline", true)
+		    .addField("2nd Field", "Inline", true)
+		    .addField("3rd Field", "No-Inline", false)
+		    .setThumbnail("https://kryptongta.com/images/kryptonlogo.png")
+		    .setFooter("Footer text", "https://kryptongta.com/images/kryptonlogodark.png")
+		    .setImage("https://kryptongta.com/images/kryptontitle2.png")
+		    .setAuthor("Author Name", "https://kryptongta.com", "https://kryptongta.com/images/kryptonlogowide.png")
+		    .setUrl("https://kryptongta.com"));
+		    webhook.addEmbed(new DiscordWebhook.EmbedObject()
+		    .setDescription("Just another added embed object!"));
+		    try {
+				webhook.execute();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} //Handle exception	
+			
+		
+		break;
+		
+		case "!ice":
+			Reactie = "https://zippy.gfycat.com/OptimalPlainKoalabear.webm";
+			break;
+
+				
 		case "!shame":
 			Reactie = "https://media.tenor.com/images/b8ecdafa8469b57e1497fa7264f3638a/tenor.gif";
 			break;
@@ -52,10 +91,16 @@ public class contentReader {
 		case "!grats":
 			Reactie = "https://giphy.com/gifs/carnaval-carnival-dance-10hO3rDNqqg2Xe";
 			break;
+		
+		case "!cin":
+			Reactie = "And behold a pale horse, and she that sat upon him,\r\n" + 
+					"her name was Cintara. \r\n" + "https://www.singularityweblog.com/wp-content/uploads/2016/02/Death.jpg";
+			break;	
+
+		case "!xmas":
+			Reactie = "https://i.ytimg.com/vi/IfZLuMHpG2M/hqdefault.jpg";
+			break;
 			
-			
-			
-				
 				
 		case "!size":
 			Reactie = "https://imgur.com/a/5TEJYeu";

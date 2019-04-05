@@ -45,7 +45,7 @@ public class curse {
 
 		String replacer = null;
 		replacer = Bericht;
-		Curse = replacer.replaceAll("!", "") + " <:troll:345905665405091842>";
+		Curse = replacer.replaceAll("!", "") + " <:troll:519837514589011969>";
 
 		return Curse;
 	}
