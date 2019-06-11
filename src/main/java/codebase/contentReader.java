@@ -69,8 +69,20 @@ public class contentReader {
 			} //Handle exception	
 			
 		
-		break;
+		    break;    
 		
+		case "!wut":
+			Reactie = "https://imgur.com/a/hqOuDDT";
+			break;
+		
+		case "!nelson":
+			Reactie = "https://media.giphy.com/media/q5ZGrl0J65ivu/giphy.gif";
+			break;
+		
+
+
+			
+			
 		case "!ice":
 			Reactie = "https://zippy.gfycat.com/OptimalPlainKoalabear.webm";
 			break;
@@ -384,7 +396,7 @@ public class contentReader {
 			String Victim = null;
 			Victim = Bericht.substring(6, Bericht.length());
 				
-			if (Victim.equalsIgnoreCase("@cin")) {
+			if (Victim.equalsIgnoreCase("cintara")) {
 				Reactie = "*/Kicks " + Victim + " in the hemeroids*";
 			} 
 			else {
